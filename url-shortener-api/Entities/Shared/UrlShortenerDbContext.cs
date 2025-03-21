@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using url_shortener_api.Entities.Models;
 
-namespace url_shortener_api.Entities.Models
+namespace url_shortener_api.Entities.Shared
 {
     public class UrlShortenerDbContext : DbContext
     {

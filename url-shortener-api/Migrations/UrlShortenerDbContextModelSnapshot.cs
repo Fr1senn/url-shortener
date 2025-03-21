@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using url_shortener_api.Entities.Models;
+using url_shortener_api.Entities.Shared;
 
 #nullable disable
 
