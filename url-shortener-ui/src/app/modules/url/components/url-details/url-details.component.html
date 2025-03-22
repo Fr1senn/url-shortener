@@ -1,0 +1,19 @@
+@if(url) { @if (errorMessage()) {
+<span>{{ errorMessage() }}</span>
+<br />
+}
+<span>{{ url | json }}</span>
+<br />
+
+@if(url.createdBy.id.toString() === userInfo?.userId || userInfo?.role ===
+'Admin') {
+<button (click)="delete()">Delete</button>
+<br />
+@if (isEditing) {
+<form [formGroup]="urlEditingForm">
+  <input formControlName="url" type="text" />
+  <button (click)="edit()">Edit</button>
+</form>
+} } } @if (userInfo?.role === 'Admin') {
+<button (click)="isEditing = !isEditing">Edit</button>
+}

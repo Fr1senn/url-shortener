@@ -1,0 +1,19 @@
+@if (errorMessage()) {
+<span>{{ errorMessage() }}</span>
+}
+<form [formGroup]="registerForm">
+  <input type="text" placeholder="Enter login..." formControlName="login" />
+  <input
+    type="password"
+    placeholder="Enter password..."
+    formControlName="password"
+  />
+  <input
+    type="password"
+    placeholder="Confirm Password"
+    formControlName="passwordConfirmation"
+  />
+  <button (click)="register()" [disabled]="registerForm.invalid">
+    Register
+  </button>
+</form>

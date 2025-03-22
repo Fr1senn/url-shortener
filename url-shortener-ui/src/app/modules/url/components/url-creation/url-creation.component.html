@@ -1,0 +1,8 @@
+@if (errorMessage()) {
+<span>{{ errorMessage() }}</span>
+}
+
+<form [formGroup]="urlCreationForm">
+  <input formControlName="url" type="text" placeholder="Enter URL..." />
+  <button (click)="create()">Create</button>
+</form>

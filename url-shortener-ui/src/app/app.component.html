@@ -1,0 +1,8 @@
+@if (isUserAuthenticated()) {
+<button [routerLink]="['urls/add']">Create a new URL</button>
+<button (click)="logOut()">Log out</button>
+} @else {
+<button [routerLink]="['/login']">Login</button>
+<button [routerLink]="['/register']">Register</button>
+}
+<router-outlet></router-outlet>

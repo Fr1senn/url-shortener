@@ -10,6 +10,7 @@ namespace url_shortener_api.Extentions
         public static void AddRepositories(this IServiceCollection services)
         {
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IUrlRepository, UrlRepository>();
         }
     }
 }

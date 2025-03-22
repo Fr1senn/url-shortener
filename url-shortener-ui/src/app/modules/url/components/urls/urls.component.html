@@ -1,0 +1,36 @@
+<table>
+  <thead>
+    <tr>
+      <th>Original URL</th>
+      <th>Short URL</th>
+      <th>Created By</th>
+      <th>Created At</th>
+    </tr>
+  </thead>
+  <tbody>
+    @for (url of urls(); track $index) {
+    <tr>
+      <td>
+        <a target="_blank" [href]="url.originalUrl">{{ url.originalUrl }}</a>
+      </td>
+      <td>
+        <a [routerLink]="['/urls', url.shortUrl]">{{ url.shortUrl }}</a>
+      </td>
+      <td>{{ url.createdBy.login }}</td>
+      <td>{{ url.createdAt }}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  tr:nth-child(even) {
+    background-color: #d6eeee;
+  }
+</style>
+<router-outlet></router-outlet>
