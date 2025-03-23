@@ -229,7 +229,6 @@ _Pvt_Extensions
 .fake/
 
 # Project settings
-appsettings.json
 appsettings.Development.json
 
 # Compiled output
